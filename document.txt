@@ -1,0 +1,28 @@
+1. lifo
+2.fifo 
+3. stack 
+4. quiue
+5. circuler quiue 
+stack definition
+    insertion and deletion happens in only single side.
+    
+    case1.if we doing insertion at begin then deletion at the begin. 
+
+    case2. if we doing insertion at end then deletion at end.
+
+
+
+quiue:
+    insertion and deletion happens oposite side.
+
+    type1. inseted at begin the begin the deletion at end
+    type2. if insertion at end then deletion at begin
+    enqueue --- insertion
+    dequeue --- deletion
+there are two way to perform operation in that stack
+    1. insert data at begin then deletion from end
+    2. insert at end then definition from begin
+
+
+
+
