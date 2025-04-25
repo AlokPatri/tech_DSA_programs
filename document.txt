@@ -23,6 +23,10 @@ there are two way to perform operation in that stack
     1. insert data at begin then deletion from end
     2. insert at end then definition from begin
 
+removing the loop from linked list 
+    1. the question is that , how can i access the element after the loop element ?
+    
+
 
 
 

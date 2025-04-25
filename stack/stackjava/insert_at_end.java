@@ -1,9 +1,11 @@
 class Node {
     int data;
     Node next;
+
     Node(int data) {
         this.data = data;
-    }   this.next = null;
+    this.next=null;
+    }
 
 }
 
@@ -27,7 +29,6 @@ class Stack {
         }
         temp.next = newNode;
 
-
     }
 
     void pop() {
@@ -35,7 +36,7 @@ class Stack {
             System.out.println("Stack is empty");
             return;
         }
-        temp = top;
+        Node temp = top;
         if (temp.next == null) {
             top = null;
             return;
@@ -43,7 +44,11 @@ class Stack {
         while (temp.next.next != null) {
             temp = temp.next;
         }
+        Node poped_element = temp.next.next;
         temp.next = null;
+
+        System.out.println("Popped element: " + poped_element);
+
     }
 
     void display() {

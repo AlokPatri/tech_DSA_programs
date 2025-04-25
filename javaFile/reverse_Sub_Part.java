@@ -28,36 +28,22 @@ class LinkedList {
         }
     }
 
-    void reverseSubPart(int start, int end) {
-        if (head == null || start >= end) {
-            return;
-        }
-
-        Node dummy = new Node(0);
-        dummy.next = head;
-        Node prev = dummy;
-
-        for (int i = 0; i < start - 1; i++) {
-            if (prev == null) {
-                return;
+    void reverseSubPart(Node head, int start, int end) {
+        Node current = this.head, prev_m = null,
+        mth = null, nth = null, after_n = null;
+        for (int i = 1; current.next != null; i++, current = current.next) {
+            if (i == start - 1) {
+                prev_m = current;
             }
-            prev = prev.next;
-        }
-
-        Node current = prev.next;
-        Node tail = current;
-
-        for (int i = 0; i < end - start; i++) {
-            if (tail == null) {
-                return;
+            if (i == start) {
+                mth = current;
             }
-            tail = tail.next;
+            if (i == end) {
+                nth = current;
+                after_n = current.next;
+                break;
+            }
         }
 
-        Node next = tail.next;
-        tail.next = null;
-
-        prev.next = reverse(current);
-        current.next = next;
     }
 }
